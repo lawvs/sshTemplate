@@ -1,0 +1,5 @@
+#禁止所有爬虫收录任何部分
+User-agent: *
+Disallow: /
+
+
