@@ -29,10 +29,8 @@ public class UserServiceImpl implements IUserService {
 
 		// 检查密码
 		if (user != null && user.getPassword().equals(password)) {
-			LogManager.getRootLogger().info("登录成功");
 			return user;
 		}
-		LogManager.getRootLogger().warn("登录失败！");
 		return null;
 	}
 

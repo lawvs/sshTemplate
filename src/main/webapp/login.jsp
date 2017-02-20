@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
-<link rel="icon" href="${pageContext.request.contextPath}/icon.png">
+<link rel="icon" href="${pageContext.request.contextPath}/resources/images/icon.png">
 </head>
 <body>
 	<h1>登录</h1>

@@ -10,18 +10,35 @@
 	<constant name="struts.devMode" value="true" />
 
 	<package name="default" namespace="/" extends="struts-default">
+
+		<interceptors>
+			<!-- 自定义拦截器 name指定自定义拦截器的引用名称 -->
+			<interceptor name="loginInterceptor" class="edu.jmu.interceptor.LoginInterceptor" />
+			<interceptor-stack name="loginStack">
+				<!--Struts2默认拦截栈 -->
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+
+		<!--Struts2默认拦截栈 -->
+		<default-interceptor-ref name="defaultStack" />
 		<!-- <default-action-ref name="index" /> -->
+
+		<!-- 全局结果映射 -->
 		<global-results>
+			<result name="login">/login.jsp</result>
 			<result name="error">/WEB-INF/jsp/error.jsp</result>
 		</global-results>
+
+		<!-- 全局异常映射 -->
 		<global-exception-mappings>
 			<exception-mapping exception="java.lang.Exception"
 				result="error" />
 		</global-exception-mappings>
 
-		<!-- <action name="index"> <result type="redirectAction"> <param name="actionName">HelloWorld</param> 
-			<param name="namespace">/example</param> </result> </action> -->
 	</package>
+
 	<!-- <include file="example.xml" /> -->
 	<!-- Add packages here -->
 </struts>

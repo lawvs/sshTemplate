@@ -4,11 +4,16 @@
 <html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>404</title>
-<link rel="icon" href="${pageContext.request.contextPath}/resources/images/icon.png">
+<title>用户管理</title>
+<link rel="icon"
+	href="${pageContext.request.contextPath}/resources/images/icon.png">
 </head>
 <body>
-	<h1>404</h1>
+	<h1>用户管理</h1>
+	<p>欢迎你，${sessionScope.user.username}</p>
+	<p>
+		<a href="${pageContext.request.contextPath}/login.jsp">注销</a>
+	</p>
 	<p>
 		<a href="${pageContext.request.contextPath}/index.jsp">返回主页</a>
 	</p>
