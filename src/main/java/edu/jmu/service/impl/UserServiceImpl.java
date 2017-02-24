@@ -36,7 +36,7 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public boolean register(User user) {
-		// TODO 自动生成的方法存根
+		// TODO 实现注册方法
 		return true;
 	}
 

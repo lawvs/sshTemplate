@@ -19,7 +19,7 @@
 		</c:when>
 		<c:otherwise>
 			<p>
-				<a href="${pageContext.request.contextPath}/dashboard">控制台</a>
+				<a href="${pageContext.request.contextPath}/dashboard">仪表盘</a>
 			</p>
 			<p>
 				<a href="${pageContext.request.contextPath}/login.jsp">注销</a>
